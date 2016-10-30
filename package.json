@@ -8,12 +8,13 @@
     "url": "git+https://github.com/pgbr/www-2017.git"
   },
   "author": "PGBR Team",
-  "license": "BSD v3",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/pgbr/www-2017/issues"
   },
   "homepage": "https://github.com/pgbr/www-2017#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-gh-pages": "^0.5.4"
   }
 }
