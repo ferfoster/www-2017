@@ -9,7 +9,7 @@ var gutil = require('gulp-util');
 // Based on: https://github.com/jbrodriguez/hugulp/blob/master/gulp/hugo.js
 function hugo(drafts) {
 
-    var cmd = 'hugo --config=config.toml ';
+    var cmd = 'hugo';
     if (drafts) {
         cmd += ' --buildDrafts=true --verbose=true" ';
     }
@@ -18,11 +18,11 @@ function hugo(drafts) {
     gutil.log('hugo: \n' + result);
 }
 
-gulp.task('hugo', function () {
+gulp.task('hugo', ['clean:dist'], function () {
     hugo(false);
 });
 
-gulp.task('ghpages', function () {
+gulp.task('ghpages', ['hugo'], function () {
     return gulp.src('./dist/**/*')
         .pipe(ghPages());
 });
@@ -34,4 +34,8 @@ gulp.task('clean:dist', function () {
 });
 
 
-gulp.task('deploy', ['clean:dist', 'hugo', 'ghpages']);
+gulp.task('deploy', [
+    'clean:dist',
+    'hugo',
+    'ghpages'
+]);
