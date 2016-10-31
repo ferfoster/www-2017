@@ -7,7 +7,7 @@ layoutdir = "app/layouts"
 publishdir = "dist"
 staticdir = "app/static"
 themesdir = "app/themes"
-canonifyurls = true
+canonifyurls = false
 
 [params]
   description = "Conferência Brasileira de PostgreSQL"
