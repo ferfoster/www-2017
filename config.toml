@@ -1,4 +1,4 @@
-baseurl = "http://pgbr.postgresql.org.br/"
+baseurl = "http://pgbr.postgresql.org.br/2017/"
 title = "#PGBR2017"
 languageCode = "en-us"
 contentdir = "app/content"
